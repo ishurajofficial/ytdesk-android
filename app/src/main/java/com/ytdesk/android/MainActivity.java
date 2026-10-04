@@ -220,7 +220,8 @@ public class MainActivity extends AppCompatActivity {
             for (VideoFormat format : info.getFormats()) {
                 String videoCodec = format.getVcodec();
                 if (format.getHeight() <= 0 || TextUtils.isEmpty(format.getFormatId()) ||
-                        TextUtils.isEmpty(videoCodec) || "none".equals(videoCodec)) continue;
+                        TextUtils.isEmpty(videoCodec) || "none".equals(videoCodec) ||
+                        !"mp4".equalsIgnoreCase(format.getExt())) continue;
                 VideoFormat previous = bestByHeight.get(format.getHeight());
                 if (previous == null || preferFormat(format, previous)) bestByHeight.put(format.getHeight(), format);
             }
@@ -229,7 +230,7 @@ public class MainActivity extends AppCompatActivity {
         heights.sort(Collections.reverseOrder());
         if (!heights.isEmpty()) {
             VideoFormat best = bestByHeight.get(heights.get(0));
-            videoChoices.add(new FormatChoice("Best available · " + heights.get(0) + "p", "bestvideo+bestaudio/best", "video", estimateVideoSize(info, heights.get(0), best), 0));
+            videoChoices.add(new FormatChoice("Best available · " + heights.get(0) + "p", "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]", "video", estimateVideoSize(info, heights.get(0), best), 0));
             for (int height : heights) {
                 VideoFormat format = bestByHeight.get(height);
                 String selector = format.getFormatId();
