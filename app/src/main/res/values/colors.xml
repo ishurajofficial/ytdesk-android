@@ -1,0 +1,11 @@
+<resources>
+    <color name="yt_red">#F52E55</color>
+    <color name="yt_red_dark">#C8173D</color>
+    <color name="yt_background">#101318</color>
+    <color name="yt_surface">#191E26</color>
+    <color name="yt_surface_raised">#222A35</color>
+    <color name="yt_border">#303A48</color>
+    <color name="yt_text">#F3F5F8</color>
+    <color name="yt_muted">#A4ADBA</color>
+    <color name="yt_success">#45C6A0</color>
+</resources>
