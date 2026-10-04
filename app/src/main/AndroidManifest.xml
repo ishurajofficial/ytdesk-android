@@ -4,7 +4,6 @@
 
     <application
         android:allowBackup="false"
-        android:extractNativeLibs="true"
         android:icon="@drawable/ic_ytdesk"
         android:label="YtDesk"
         android:theme="@style/Theme.YtDesk"

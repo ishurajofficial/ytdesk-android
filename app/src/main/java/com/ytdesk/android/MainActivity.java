@@ -31,7 +31,7 @@ import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.progressindicator.LinearProgressIndicator;
 import com.google.android.material.switchmaterial.SwitchMaterial;
 import com.google.android.material.textfield.TextInputEditText;
-import com.yausername.youtubedl_android.FFmpeg;
+import com.yausername.ffmpeg.FFmpeg;
 import com.yausername.youtubedl_android.YoutubeDL;
 import com.yausername.youtubedl_android.YoutubeDLException;
 import com.yausername.youtubedl_android.YoutubeDLRequest;
@@ -302,7 +302,7 @@ public class MainActivity extends AppCompatActivity {
 
         MaterialButton download = new MaterialButton(this);
         download.setText("Download");
-        download.setTextAllCaps(false);
+        download.setAllCaps(false);
         download.setCornerRadius(dp(11));
         download.setMinHeight(dp(42));
         download.setInsetTop(0);
